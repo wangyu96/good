@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: smaller;
+            /*border: 0;*/
+        }
+        #head{
+            text-align: left;
+        }
+        td{
+            width: 104px;
+            height: 22px;
+        }
+        table{
+            margin-left: 10px;
+            margin-top: 10px;
+            border-collapse:collapse;//去掉元素间空隙
+        }
+
+    </style>
+</head>
+<body>
+    <table id="table">
+        <tr id="head">
+            <th>姓名</th>
+            <th>性别</th>
+            <th>暂住地</th>
+        </tr>
+        <tr>
+            <td>张山</td>
+            <td>男</td>
+            <td>浙江宁波</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>女</td>
+            <td>浙江杭州</td>
+        </tr>
+        <tr>
+            <td>王五</td>
+            <td>男</td>
+            <td>湖南长沙</td>
+        </tr>
+        <tr>
+            <td>赵六</td>
+            <td>男</td>
+            <td>浙江温州</td>
+        </tr>
+        <tr>
+            <td>Rain</td>
+            <td>男</td>
+            <td>浙江杭州</td>
+        </tr>
+        <tr>
+            <td>Max</td>
+            <td>女</td>
+            <td>浙江杭州</td>
+        </tr>
+
+    </table>
+
+    <script src="../../../jquery-1.12.4.js"></script>
+
+    <script>
+        $("#table tr:odd").css({
+            background:"red"
+
+        });
+        $("#table tr:even").css({
+            background:"blue"
+        })
+        $("#head").css("background","#ffffff");
+    </script>
+</body>
+</html>

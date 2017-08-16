@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-size: 12px;
+            font-family: Arial;
+        }
+        form div {
+            margin: 5px 0;
+        }
+            .int label{
+                float: left;
+                width: 100px;
+                text-align: right;
+            }
+        .int input{
+            padding: 1px 1px;
+            border: 1px solid #ccc;
+            height: 16px;
+        }
+
+        #sub {
+            padding-left: 100px;
+        }
+        #sub input{
+            margin-right: 10px;
+            padding: 1px 4px;
+        }
+        .星{
+            color:red;
+        }
+        img{
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+<form action="">
+    <div class="int">
+        <label for="username">用户名:</label>
+        <input type="text" id="username" class="requird">
+        <strong class="星">*</strong>
+        <span><img src="reg3.gif" alt="">请输入至少6位的用户名</span>
+    </div>
+    <div class="int">
+        <label for="emil">邮箱:</label>
+        <input type="text" id="emil" class="requird">
+        <strong class="星">*</strong>
+    </div>
+
+    <div class="int">
+        <label for="person">个人资料:</label>
+        <input type="text" id="person" class="requird"><br/>
+    </div>
+    <div id="sub">
+        <input type="submit">
+        <input type="reset">
+    </div>
+</form>
+<script src="../../../../jquery-1.12.4.js"></script>
+<script>
+    
+</script>
+</body>
+</html>

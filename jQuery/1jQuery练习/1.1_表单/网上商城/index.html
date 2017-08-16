@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+        }
+        #header{
+            width: 100%;
+            height: 105px;
+            background-image: url("img/headerbg.png");
+        }
+        #contWidth{
+            width: 990px;
+            height: 105px;
+            position: relative;
+            margin: 0 auto;
+
+        }
+        a.logo{
+            width: 158px;
+            height: 59px;
+            float: left;
+        }
+        #input{
+            width: 200px;
+            height: 17px;
+            border: 1px solid #BABEBF;
+            font-size: 14px;
+            padding: 3px 6px 5px 6px;
+            color: #999999;
+        }
+        .search{
+            display: inline-block;
+            left: 198px;
+            top: 20px;
+            position: absolute;
+        }
+        #nav{
+            width: 990px;
+            height: 37px;
+            background:#F9AF2A;
+            position: absolute;
+            top: 68px;
+        }
+        ul .nav{
+            height: 37px;
+            float: left;
+            width: 377px;
+        }
+        ul{
+            height: 37px;
+
+        }
+
+        #nav ul li {
+            float: left;
+            color: #ffffff;
+            margin-top: 6px;
+            margin-left: 30px;
+        }
+        #skin li{
+            float: right;
+            display: inline-block;
+        }
+        #shop{
+            width: 990px;
+            height: 580px;
+            padding: 10px;
+            position: relative;
+            margin: 0 auto;
+
+        }
+        #head2{
+            width: 187px;
+            height: 30px;
+            background: #ffcf78;
+            /*color: #FFFFFF;*/
+            line-height: 30px;
+
+
+        }
+        h2{
+
+            color: #ffffff;
+            font-size: 12px;
+            margin-left: 13px;
+        }
+
+        h3 {
+            width: 164px;
+            margin-left: 13px;
+            font-size: 12px;
+            border-bottom: 1px solid #EEEEEE;
+            padding-top: 5px;
+            color: #000000;
+        }
+        #box {
+            border-left: 1px solid #000000;
+            border-right: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+            height: 522px;
+        }
+
+        .ul2 li a{
+            color:#444444;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 12px;
+            margin-left: 13px;
+            float: left;
+            width: 79px;
+            height: 24px;
+            line-height: 24px;
+
+        }
+       .ul2 li a.promoted {
+           color: #f9044e;
+       }
+
+       .ul2 li s.hot{
+           background: url("img/hot.gif") no-repeat scroll 0 0 transparent;
+           height: 16px;
+           position: absolute;
+           width: 21px;
+           padding-bottom: 3px;
+       }
+       #srolling{
+           width: 550px;
+           height: 320px;
+           margin-left: 198px;
+           margin-top: -30px;
+           position: absolute;
+       }
+        #imgs img{
+            display: none;
+        }
+        #imgs .selected{
+            display: block;
+        }
+       /* #imgw {
+            width: 79px;
+            height: 32px;
+            padding:5px 15px;
+            float: left;
+            margin-right: 1px;
+            overflow: hidden;
+            text-align: center;
+            color: #ffffff;
+            display: inline-block;
+        }
+*/
+        #div2{
+            width: 230px;
+            height: 321px;
+            float: right;
+            position: relative;
+            margin-top: -519px;
+        }
+        /*#scroll img{*/
+            /*width: 230px;*/
+            /*height: 176px;*/
+            /*!*position: absolute;*!*/
+            /*float: right;*/
+            /*!*display: block;*!*/
+            /*margin-top: -519px;*/
+            /*margin-left: -5px;*/
+        /*}*/
+        #new{
+            width: 228px;
+            height: 133px;
+            border: 1px solid #DFDFDF;
+            position: relative;
+            float: left;
+            margin-top: 5px;
+        }
+        #new ul li a{
+            color: #666666;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 12px;
+            margin-left: 13px;
+        }
+        #div3{
+            width: 800px;
+            height: 222px;
+            float: left;
+            margin-top: -220px;
+            color: #000000;
+            margin-left: 195px;
+        }
+        #div3 h2{
+            width: 100px;
+            height: 29px;
+            /*border-bottom: 1px solid #EEEEEE;*/
+            padding-top: 5px;
+            color: #000000;
+            position: absolute;
+
+        }
+        #div3 ul{
+            width: 216px;
+            height: 23px;
+            margin-left: 574px;
+            margin-bottom: -4px;
+            margin-top: 10px;
+            /*border-bottom: 1px solid #EEEEEE;*/
+
+
+        }
+        #div3 ul li a{
+            width: 24px;
+            height: 20px;
+            line-height: 20px;
+            font-size: 12px;
+            text-decoration: none;
+            color: #000000;
+            background-color: #E4E4E4;
+            float: left;
+            margin-left: 10px;
+            padding: 2px 10px 0 10px;
+        }
+        #div3 a.selected{
+            background-color: #fa5889;
+            color: #ffffff;
+            outline: 0 none;
+        }
+        #imgs2 img{
+            width: 183px;
+            height: 164px;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 10px;
+            /*position: relative;*/
+        }
+        #imgs2 span a{
+            text-decoration: none;
+            width: 183px;
+            height: 24px;
+            margin-left: -200px;
+            margin-right: 5px;
+            margin-top: 166px;
+            background-color: #EFEFEF;
+            color: #666666;
+            line-height: 24px;
+            position: absolute;
+            text-align: center;
+            /*display: inline-block;*/
+            /*float: left;*/
+        }
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div id="contWidth">
+            <a  class="logo" href="">
+                <img src="img/logo.gif" alt="">
+            </a>
+            <div class="search">
+                <input type="text" id="input" value = "请输入商品名称">
+            </div>
+            <ul id="skin">
+                    <li id="skin_0" class="selected">蓝色</li>
+                    <li id="skin_1">紫色</li>
+                    <li id="skin_2">红色</li>
+                    <li id="skin_3">天蓝色</li>
+                    <li id="skin_4">橙色</li>
+                    <li id="skin_5">淡绿色</li>
+
+            </ul>
+            <div id="nav">
+                <ul class="nav">
+                    <li><a href="#"></a>首页</li>
+                    <li><a href="#"></a>品牌</li>
+                    <li><a href="#"></a>女装</li>
+                    <li><a href="#"></a>男装</li>
+                    <li><a href="#"></a>鞋包配饰</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="shop">
+           <div id="head2">
+               <h2>商品分类</h2>
+               <div id="box">
+                   <h3>推荐品牌</h3>
+                   <ul class="ul2">
+                       <li><a href="#">耐克</a></li>
+                       <li><a href="#" class="promoted">阿迪达斯<s class="hot"></s></a></li>
+                       <li><a href="#">达芙妮</a></li>
+                       <li><a href="#">李宁</a></li>
+                       <li><a href="#">安踏</a></li>
+                       <li><a href="#">奥康</a></li>
+                       <li><a href="#" class="promoted">骆驼<s class="hot"></s></a>
+                       </li>
+                       <li><a href="#">特步</a></li>
+                   </ul>
+                   <h3>女装</h3>
+                   <ul class="ul2">
+                       <li><a href="#">呢大衣</a></li>
+                       <li><a href="#">T恤</a></li>
+                       <li><a href="#">羽绒</a></li>
+                       <li><a href="#">衬衫</a></li>
+                       <li><a href="#">羊绒衫</a></li>
+                       <li><a href="#">针织</a></li>
+                       <li><a href="#">连衣裙</a>
+                       </li>
+                       <li><a href="#">皮外套</a></li>
+                   </ul>
+                   <h3>男装</h3>
+                       <ul class="ul2">
+                           <li><a href="#">衬衫</a></li>
+                           <li><a href="#">T恤衫</a></li>
+                           <li><a href="#">夹克</a></li>
+                           <li><a href="#">大皮衣</a></li>
+                           <li><a href="#">风衣</a></li>
+                       <li><a href="#">牛仔裤</a></li>
+                       <li><a href="#">西服</a>
+                       </li>
+                       <li><a href="#">卫衣</a></li>
+                   </ul>
+                   <h3>鞋包服饰</h3>
+                   <ul class="ul2">
+                       <li><a href="#">围巾</a></li>
+                       <li><a href="#">旅行箱</a></li>
+                       <li><a href="#">真皮包</a></li>
+                       <li><a href="#">韩版</a></li>
+                       <li><a href="#">达芙妮</a></li>
+                       <li><a href="#">单肩包</a></li>
+                       <li><a href="#">毛线</a>
+                       </li>
+                       <li><a href="#">清仓靴子</a></li>
+                   </ul>
+               </div>
+       </div>
+        <div id="srolling">
+            <a href="#" id="imgs">
+                <img src="img/1.jpg" alt="" class="selected">
+                <img src="img/2.jpg" alt="">
+                <img src="img/3.jpg" alt="">
+                <img src="img/4.jpg" alt="">
+                <img src="img/5.jpg" alt="">
+            </a>
+            <!--<div id="imgw">
+                <a href="#">
+                    <em>相约情人节</em>
+                    <em>全场119元起</em>
+                </a>
+                <a href="#">
+                    <em>新款上线</em>
+                    <em>全场357元起</em>
+                </a>
+                <a href="#">
+                    <em>愤怒小鸟特卖</em>
+                    <em>全场89元起</em>
+                </a>
+                <a href="#">
+                    <em>男鞋促销第一</em>
+                    <em>全场3.1折起</em>
+                </a>
+                <a href="#">
+                    <em>春季新品发布</em>
+                    <em>全场4.1折起</em>
+                </a>-->
+            <!--</div>-->
+        </div>
+       <div id="div2">
+           <div id="scroll">
+               <img src="img/20120216.jpg" alt="">
+           </div>
+           <div id="new">
+               <h3>最新动态</h3>
+               <ul>
+               <li>
+                   <a href="#">[活动]千百度冬靴新品火热让利</a></li>
+               <li><a href="#">[活动]COEY秋冬新品全场2.3折起</a></li>
+               <li><a href="#">[活动]伊伴春鞋迎春大促</a></li>
+                   <li>               <a href="#">[活动]千百度冬靴火热让利</a>
+                   </li>
+                   <li><a href="#">[活动]伊伴春鞋迎春大促</a></li>
+               </ul>
+           </div>
+       </div>
+        <div id="div3">
+            <h2>品牌活动</h2>
+            <ul>
+                <li><a href="#" class="selected">女鞋</a></li>
+                <li><a href="#">男鞋</a></li>
+                <li><a href="#">童鞋</a></li>
+                <li><a href="#">运动</a></li>
+            </ul>
+            <div id="imgs2">
+                <a href="#">
+                    <img src="img/20120217.jpg" alt="">
+                </a>
+                <span><a href="#">耐克</a></span>
+                <a href="#">
+                    <img src="img/20120218.jpg" alt="">
+                </a>
+                <span><a href="#">阿迪达斯</a></span>
+                <a href="#">
+                    <img src="img/20120219.png" alt="">
+                </a>
+                <span><a href="#">李宁</a></span>
+                <a href="#">
+                    <img src="img/20120220.png" alt="">
+                </a>
+                <span><a href="#">安踏</a></span>
+            </div>
+        </div>
+
+    </div>
+    <script src="../../../jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            //搜索框
+            $("#input").on("focus",function () {
+                if(this.value==this.defaultValue){
+                    this.value="";
+                }
+            }).on("blur",function () {
+                if(this.value==""){
+                    this.value=this.defaultValue;
+                }
+            })
+        })
+    </script>
+
+</body>
+</html>

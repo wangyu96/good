@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul id="ul1">
+        <li>001</li>
+        <li>002</li>
+        <li>003</li>
+        <li>004</li>
+        <li>005</li>
+    </ul>
+    <ul id="ul2">
+        <li>001</li>
+        <li>002</li>
+        <li>003</li>
+        <li>004</li>
+        <li>005</li>
+    </ul>
+    <div id="div1">div
+        <h1>hhhh</h1>
+    </div>
+    <div id="div2">div2</div>
+
+
+    <script src="../jquery-1.12.4.js"></script>
+
+    <script>
+        var $lis=$("#ul1 li");
+        /*$lis.eq(-1).css({
+            background:"#f00"
+        });*/
+        /*$lis.filter(":eq(0)").css({
+            background:"#f00"
+        });*/
+//        $lis.last().css({
+//            background:"#ff0"
+//        });
+        $("#div1").add($("#div2")).css("background","#ff0")
+    </script>
+</body>
+</html>

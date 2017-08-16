@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input[id*="pt"]{
+            /*选中所有id中含有pt的*/
+            background: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">div111</div>
+    <h1 class="aa">h1h1</h1>
+    <p class="aa">ppp</p>
+    <div id="div2">
+        <div>div
+            <h1>
+                <div id="div3">div3</div>
+            </h1>
+        </div>
+    </div>
+
+    <ul id="ul1">
+        <li>001</li>
+        <li>002</li>
+        <li>003</li>
+        <li>004</li>
+        <li>005</li>
+    </ul>
+
+    <div id="div4">divdiv4
+        <p>Hello in a paragraph</p>
+    </div>
+    <table border="1">
+        <tr>
+            <td>Value 1</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Value 2</td>
+            <td></td>
+        </tr>
+    </table>
+    用户名：<input type="text" id="ipt1" disabled> <br>
+    <!--//规定应该禁用输入字段-->
+    密码: <input type="password"> <br>
+    上传图像: <input type="file">
+
+    <div>
+        <span>Corey,hello</span>
+        <span>Yehuda,</span>
+        <span>Adam,</span>
+        <span>Todd</span>
+    </div>
+
+    <div>
+        <span>Nobody,</span>
+        <span>Jorn,</span>
+        <span>Scott,</span>
+        <span>Timo</span>
+    </div>
+
+    <div>
+        <button>Sibling!</button>
+        <button>Sibling!</button>
+    </div>
+
+    <div>
+        <button>Sibling!</button>
+    </div>
+
+    <div>
+        None
+    </div>
+
+    <div>
+        <button>Sibling!</button>
+        <button>Sibling!</button>
+        <button>Sibling!</button>
+        <button>Sibling!</button>
+    </div>
+
+    <div>
+        <button>Sibling!</button>
+        <button>Sibling!</button>
+    </div>
+
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+//            $("*").css("background","red");
+//            $("#div1").css("background","red");
+//            $("h1,p").css("background","green");
+            var oDiv1=document.getElementById("div1");
+            $(oDiv1).css("background","red");
+            console.log(oDiv1.innerHTML);
+            console.log($("#div1").get(0).innerHTML);
+//            $("#ul1 li:eq(0)").css("background","red");//第一个元素
+//            $("#ul1 li:even").css("background","green");//单数的元素
+//            $("#ul1 li:odd").css("background","red");//偶数的元素
+//            $("#ul1 li:last").css("background","black");//最后一个元素
+//            $("#ul1 li:lt(1)").css("background","red");//小于1的元素
+//            $("#ul1 li:gt(1)").css("background","green");//大于1的元素
+//            $("#ul1 li:not(:eq(0))").css("background","red");//除了0元素
+//            $("#ul1 li:contains('4')").css("background","red");//只有第四个元素
+//            $("div:has(p)").css("background","green");//选取所有p在内的div元素
+//            $("td:parent").css("background","red");//选取所有带有子元素且包含文本的td元素
+//            $("#ul1 li:last-child").css("background","red");//属于其父元素的最后一个子元素
+//            $("span:first-child").css("background","yellow");
+//            $("span:first-of-type").css("background","pink");//
+//            $("#ul1 li:nth-last-child(1)").css("background","gray");//属于其父元素的第二个li元素的所有li元素，从最后一个子元素开始计数
+            $("button:only-of-type").css("background","blue");//属于其父元素特定类型的唯一子元素的所有button元素
+        })
+    </script>
+
+
+</body>
+</html>

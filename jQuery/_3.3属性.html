@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            font-style: 30px;
+            background: #ff0000;
+        }
+        .aa{
+            background: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" class="bb">div1</div>
+    <input type="text" value="张三" id="username">
+
+    <script src="jquery-1.12.4.js"></script>
+
+    <script>
+//        var oDiv1=document.getElementById("div1");
+//        oDiv1.index=5;
+//        console.log(oDiv1.index);
+//        oDiv1.setAttribute("aa","aab");//保存数据
+//        console.log(oDiv1.getAttribute("aa"));//取出数据
+        $(function () {
+            var $div1=$("#div1");
+//            $div1.attr("aa","123");//设置属性值
+//            console.log($div1.attr("aa"));
+//            $div1.removeAttr("aa");
+//            $div1.prop("bb","234");
+//            console.log($div1.prop("bb"));
+//            $div1.removeProp("bb");
+
+
+//            var oUsername=document.getElementById("username");
+//            console.log(oUsername.getAttribute("value"));
+//            $("#username").val("李四");
+//            console.log(oUsername);
+
+           /* var oDiv1=document.getElementById("div1");
+            oDiv1.className += "aa";//div1的class名字后加aa 例：class="bbaa"
+            $div1.addClass("aa");*///例：class="bbaa aa"
+//            $div1.css("background","#f00").css("color","#fff").addClass("aa");
+           /* $div1.css({
+                background:"#f00",
+                border:"10px solid #000",
+                    fontSize:"30px",
+            });*/
+           /*$div1.css("width",function () {
+               var a=200;
+               return a+100;
+           })*/
+//           $div1.hasClass("bb");//检查被选元素是否包含指定的class
+//            $div1.removeClass("bb");
+            $div1.on("click",function () {
+                $div1.toggleClass("aa")
+            });//点击变成class="bb aa"
+
+
+        })
+
+    </script>
+</body>
+</html>
